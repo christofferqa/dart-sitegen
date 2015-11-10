@@ -2,7 +2,6 @@ library sitegen;
 
 import 'dart:io';
 import 'dart:async';
-import 'dart:collection';
 import 'dart:convert';
 import 'dart:math';
 
@@ -30,9 +29,3 @@ part "src/Init.dart";
 part "src/Generator.dart";
 
 bool _runsOnOSX() => (SysInfo.operatingSystemName == "Mac OS X");
-
-void main(List<String> arguments) {
-    final Application application = new Application();
-    application.run( arguments );
-}
-
