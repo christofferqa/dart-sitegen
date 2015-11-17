@@ -33,17 +33,7 @@ dependencies:
   http_server: ^0.9.0
 
   system_info: 0.0.16
-
+  runtime:
+    path: ../../../vm_runtime
 dev_dependencies:
   test: any
-  dynamic_type_inference:
-    path: ../../../dynamic_type_inference
-
-transformers:
-- dynamic_type_inference:
-    package: "sitegen"
-    instrumentationMode: "VM_TYPE_INFERENCE"
-    staticEntry: "bin/sitegen.dart"
-- $dart2js:
-    commandLineOptions: [--output-type=dart]
-    $exclude: ["assets", "bin", "lib", "sample", "web"]
